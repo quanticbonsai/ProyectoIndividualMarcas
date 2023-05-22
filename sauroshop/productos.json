@@ -1,0 +1,46 @@
+{
+    "productos": [
+        {
+            "nombre": "Camiseta de dinosaurio",
+            "precio": 15.99,
+            "categoria": "Ropa",
+            "descripcion": "Camiseta de algodón con estampado de dinosaurio. Disponible en varios tamaños y colores.",
+            "imagen": "./../img/camiseta dinosaurioRes.PNG"
+        },
+        {
+            "nombre": "Gorra de dinosaurio",
+            "precio": 9.99,
+            "categoria": "Accesorios",
+            "descripcion": "Gorra con diseño de dinosaurio bordado. Ajustable y cómoda de usar.",
+            "imagen": "./../img/dinocapRes.PNG"
+        },
+        {
+            "nombre": "Peluche de diplodocus",
+            "precio": 12.99,
+            "categoria": "Juguetes",
+            "descripcion": "Peluche suave y adorable de un diplodocus. Ideal para regalar a niños y amantes de los dinosaurios.",
+            "imagen": "./../img/dinoPlushieRes.PNG"
+        },
+        {
+            "nombre": "Piruletas de dinosaurio",
+            "precio": 5.99,
+            "categoria": "Dulces",
+            "descripcion": "Piruleta con forma de dinosaurio. Deliciosa y divertida para disfrutar en cualquier momento.",
+            "imagen": "./../img/chupasaurios.jpg"
+        },
+        {
+            "nombre": "Chocolatinas de dinosaurio",
+            "precio": 4.99,
+            "categoria": "Dulces",
+            "descripcion": "Chocolatina de leche con forma de dinosaurio. Un delicioso y divertido tentempié.",
+            "imagen": "./../img/chocoSaurios.jpg"
+        },
+        {
+            "nombre": "Nachosaurio",
+            "precio": 19.99,
+            "categoria": "Accesorios",
+            "descripcion": "Cuenco para guardar nachos con forma de brachiosaurio. Ideal para fiestas y reuniones temáticas de dinosaurios.",
+            "imagen": "./../img/nachosaurio.jpg"
+        }
+    ]
+}

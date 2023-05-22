@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="src/footer.css">
+    <link rel="stylesheet" href="src/navbar.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <title>SauroShop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <script>
+        // Cargar el JSON de forma asíncrona
+        fetch('./ruta/a/tu/archivo.json')
+            .then(response => response.json())
+            .then(data => {
+                // Obtener el arreglo de productos del JSON
+                var productos = data.productos;
+
+                // Obtener los contenedores de las imágenes
+                var slideItemContainer = document.querySelector('.slide-item');
+                var carouselSlide2Container = document.querySelector('.carousel-slide2');
+
+                // Recorrer las primeras 3 imágenes y reemplazar las existentes en slideItemContainer
+                for (var i = 0; i < 3; i++) {
+                    var imgElement = document.createElement("img");
+                    imgElement.src = productos[i].imagen;
+                    imgElement.alt = productos[i].nombre;
+
+                    slideItemContainer.appendChild(imgElement);
+                }
+
+
+            });
+    </script>
+    <div class="principal">
+        <!--INICIO NAVBAR-->
+        <nav class="navbar">
+            <div class="logo"> <a href="index.html"><img class="sauropod" src="./img/Sauropod.png"></img></a>
+            </div>
+
+            <ul class="listaNav">
+                <li class="elementoNav">Destacados</li>
+                <li class="elementoNav hoverProductos">Productos
+                    <ul class="menuProductos">
+                        <li class="hijoNav">Camisetas</li>
+                        <a href="src/peluches.html" style="text-decoration: none;">
+                            <li class="hijoNav">Peluches</li>
+                        </a>
+                        <li class="hijoNav">Accesorios</li>
+                        <li class="hijoNav">Snacks</li>
+                    </ul>
+                </li>
+                <li class="elementoNav">Tiendas</li>
+                <a href="./src/feedback.html" style="text-decoration: none;">
+                    <li class="elementoNav">Feeback</li>
+                </a>
+            </ul>
+        </nav>
+        <!--FIN NAVBAR-->
+        <!--INICIO CUERPO DE LA PAGINA-->
+        <div class="contenido">
+            <!--Primera fila-->
+            <div class="primeraFila">
+                <!--CARROUSEL 1-->
+                <div class="slider1">
+                    <div class="slide-inner">
+                        <input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden=""
+                            checked="checked">
+                        <div class="slide-item">
+                            <div class="middle">
+                                <div class="text">Comprar</div>
+                            </div>
+                        </div>
+
+                        <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
+                        <div class="slide-item">
+                            <div class="middle">
+                                <div class="text">Comprar</div>
+                            </div>
+                        </div>
+
+                        <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
+                        <div class="slide-item">
+                            <div class="middle">
+                                <div class="text">Comprar</div>
+                            </div>
+                        </div>
+
+                        <script>
+                            // Cargar el JSON 
+                            fetch('productos.json')
+                                .then(response => response.json())
+                                .then(data => {
+                                    // Obtener el arreglo de productos del JSON
+                                    var productos = data.productos;
+
+                                    // Obtener los contenedores de las imágenes
+                                    var slideItems = document.querySelectorAll('.slide-item');
+
+                                    // Recorrer los primeros 3 contenedores y reemplazar las imágenes
+                                    for (var i = 0; i < 3; i++) {
+                                        var imgElement = document.createElement("img");
+                                        imgElement.src = productos[i].imagen;
+                                        imgElement.alt = productos[i].nombre;
+
+                                        slideItems[i].appendChild(imgElement);
+                                    }
+                                });
+                        </script>
+
+                        <ul class="listaBolitas">
+                            <li>
+                                <label for="slide-1" class="bolitas">•</label>
+                            </li>
+                            <li>
+                                <label for="slide-2" class="bolitas">•</label>
+                            </li>
+                            <li>
+                                <label for="slide-3" class="bolitas">•</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--FIN CARROUSEL 1-->
+                <aside class="asides">
+                    <p class="textoAside">
+                        SauroShop es el destino perfecto para los amantes de los dinosaurios.
+                        Nuestra tienda ofrece una amplia selección de productos únicos y de alta calidad que seguramente
+                        complacerán a cualquier entusiasta de los dinosaurios. Desde camisetas hasta gorras y peluches,
+                        tenemos todo lo que necesitas para mostrar tu pasión por estos fascinantes seres prehistóricos.
+                        <br>
+                        Nuestras camisetas son verdaderas obras de arte. Están diseñadas con ilustraciones detalladas de
+                        diferentes especies de dinosaurios, si estás buscando complementar tu atuendo, no puedes dejar
+                        de echar un vistazo a nuestras gorras. Con diseños bordados En SauroShop, ofrecemos una amplia
+                        selección de peluches de dinosaurios de diferentes tamaños y especies. Desde el pequeño y tierno
+                        Velociraptor hasta el grande y abrazable Diplodocus.
+                    </p>
+                </aside>
+            </div>
+            <!--SEGUNDA fila-->
+            <div class="segundaFila">
+                <aside class="asides">
+                    <p class="textoAside">ofrecemos una amplia variedad de golosinas. Nuestras piruletas de dinosaurios
+                        son coloridas, divertidas y vienen en una variedad de sabores exquisitos. ¡Son un dulce
+                        irresistible para disfrutar o compartir con amigos! <br>
+
+                        También ofrecemos deliciosas chocolatinas. Nuestro chocolate de alta calidad se combina con
+                        diseños detallados que representan a diferentes dinosaurios. Cada bocado es una experiencia de
+                        sabor y textura que te transportará al creatácico.<br>
+
+                        Si buscas un artículo único y práctico, no puedes perderte nuestro exclusivo Nachosaurio. Este
+                        divertido cuenco para guardar tus nachos está diseñado en forma de un simpático Brachiosaurio.
+                        Con una construcción resistente, el Nachosaurio es el compañero perfecto para disfrutar tus
+                        nachos. ¡Agrega un toque divertido y jurásico a tus momentos de snack con este adorable cuenco!
+
+
+                    <p>
+                </aside>
+                <!--CARROUSEL 2-->
+                <div class="carousel-container2">
+                    <div class="carousel-slide2">
+                        <img src="img\chupasaurios.jpg" alt="chupa chups de dinosaurios">
+                        <img src="img/chocoSaurios.jpg" alt="Chocolatinas con forma de dinosarurios">
+                        <img src="img/nachosaurio.jpg"
+                            alt="El increible nachosaurio capaz de almacenar tus nachos (es un bol)">
+                    </div>
+                </div>
+            </div>
+            <!--FIN CARROUSEL 2-->
+        </div>
+        <!--FIN CUERPO DE LA PAGINA-->
+        <!--INICIO FOOTER-->
+        <footer class="barrafooter">
+            <div class="apartados">
+                <span class="textoFooter">Contacto</span>
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="flecha"></div>
+                <div class="contenidoapartado">
+                    <ul class="listafooter">
+                        <li class="elementoLista">walala🦕</li>
+                        <li class="elementoLista">wollaa🦕</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="apartados">
+                <span class="textoFooter">Redes Sociales</span>
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="flecha"></div>
+                <div class="contenidoapartado">
+                    <ul class="listafooter">
+                        <li class="elementoLista">walala🦕</li>
+                        <li class="elementoLista">wollaa🦕</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="apartados">
+                <span class="textoFooter">apartado3</span>
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="flecha"></div>
+                <div class="contenidoapartado">
+                    <ul class="listafooter">
+
+                        <li class="elementoLista"><a href="./src/enDesarrollo.html" style="text-decoration: none;">
+                                walala🦕</a></li>
+                        <li class="elementoLista">wollaa🦕</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--FIN FOOTER-->
+    </div>
+
+</body>
+
+</html>

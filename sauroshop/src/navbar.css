@@ -1,0 +1,126 @@
+:root {
+    --color-fondo: #57cc99;
+    --color-contenido: #80ed99;
+    --color-background: #e4ecf0;
+    --color-detalles1: white;
+    --color-detalles2: black;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-fondo);
+}
+
+.logo {
+    width: 10%;
+    height: 85%;
+    margin-left: 2%;
+    margin-top: 0.4%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+.sauropod {
+
+    max-height: 100%;
+    width: auto;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.listaNav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 89%;
+    padding: 0;
+    margin: 0;
+}
+
+.elementoNav {
+    width: 200px;
+    height: fit-content;
+    margin-right: 5%;
+    overflow: hidden;
+    padding: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    font-size: larger;
+    z-index: 9;
+    color: white;
+
+}
+
+.elementoNav:hover {
+    transition: background-color 0.4s ease;
+    /* Transición de 0.3 segundos con aceleración suave */
+    background-color: var(--color-contenido);
+
+}
+
+.hijoNav {
+    text-align: center;
+}
+
+
+
+.hijoNav:hover {
+    transition: background-color 0.4s ease;
+    background-color: var(--color-contenido);
+}
+
+
+.menuProductos {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    margin-left: -30px;
+    z-index: 10;
+    margin-top: 12px;
+}
+
+.menuProductos li {
+    overflow: hidden;
+    background-color: var(--color-fondo);
+    padding: 7px;
+    padding-left: 30px;
+    padding-right: 30px;
+    animation: ease-in;
+    animation-name: spawnMenu;
+    animation-duration: 0.5s;
+
+}
+
+@keyframes spawnMenu {
+    0% {
+        margin-bottom: 30px;
+        background-color: transparent;
+    }
+
+    100% {
+        margin-bottom: 0px;
+        background-color: var(--color-fondo);
+    }
+}
+
+.hoverProductos:hover .menuProductos {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-device-width:1200px) {
+    .menuProductos li {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .menuProductos {
+        margin-left: -50px;
+    }
+}

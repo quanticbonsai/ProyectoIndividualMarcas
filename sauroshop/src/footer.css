@@ -1,0 +1,167 @@
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+
+:root {
+    --color-fondo: #57cc99;
+    --color-contenido: #80ed99;
+    --color-background: #a0a4a6;
+    --color-detalles1: white;
+    --color-detalles2: black;
+}
+
+.barrafooter {
+    position: absolute;
+    padding-bottom: 110px;
+    top: 120%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: var(--color-contenido);
+
+}
+
+.apartados {
+    color: var(--color-detalles2);
+    margin-top: 3%;
+    display: block;
+    width: 28%;
+    /*! height: 4rem; */
+    margin-left: 1%;
+    margin-right: 1%;
+    box-shadow: -10px 20px 15px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 60px 3px 60px 3px;
+    background-color: var(--color-detalles1);
+    /*! border: solid var(--color-detalles1) 3px; */
+
+    /*! min-height: 20vh; */
+    height: 60px;
+}
+
+.apartados .flecha::after {
+    font-family: 'FontAwesome';
+    content: "\f054";
+}
+
+.apartados .checkbox {
+
+    z-index: 2;
+    position: relative;
+    float: right;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.apartados .textoFooter {
+    position: relative;
+    top: 1.4rem;
+    margin-left: 3rem;
+}
+
+.apartados .checkbox {
+    float: right;
+    position: relative;
+    width: 22px;
+    top: 21px;
+    right: 35px;
+    margin-left: -23px;
+}
+
+.apartados .flecha {
+    float: right;
+    position: relative;
+    width: 20px;
+    top: 20px;
+    right: 35px;
+}
+
+.contenidoapartado {
+    background-color: #fff;
+    overflow: hidden;
+    margin-top: 2.95rem;
+    margin-right: 3rem;
+    box-shadow: -10px 20px 15px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 2px 2px 20px 20px / 6px 2px 20px 20px;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    border-top: none;
+}
+
+
+.contenidoapartado .listafooter {
+    margin-left: 1rem;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+
+}
+
+.contenidoapartado .listafooter .elementoLista {
+    width: max-content;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.contenidoapartado .listafooter .elementoLista:hover {
+    color: var(--color-fondo);
+    cursor: pointer;
+    font-weight: bold;
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.apartados input[type="checkbox"]:checked~.flecha::after {
+    content: "\f078";
+    position: absolute;
+}
+
+.apartados input[type="checkbox"]:checked~.contenidoapartado {
+    max-height: 500px;
+    transition: max-height 1s ease-in;
+    /*! border: solid var(--color-detalles1) 3px; */
+
+}
+
+.apartados:last-child {
+    margin-bottom: 30px;
+}
+
+@media screen and (max-device-width:1200px) {
+    .barrafooter {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 60px;
+    }
+
+    .apartados {
+        width: auto;
+        min-width: 220px;
+        margin-right: 20px;
+        margin-left: 35px;
+        margin-bottom: 80px;
+    }
+
+    .apartados:last-child {
+        margin-bottom: 30px;
+    }
+
+
+
+    .apartados .checkbox {
+
+        float: right;
+        position: relative;
+        width: 22px;
+        top: 21px;
+        margin-left: -23px;
+    }
+
+    .apartados .flecha {
+        float: right;
+        position: relative;
+        width: 20px;
+        top: 20px;
+    }
+
+
+}
